@@ -94,9 +94,9 @@ static void clk_handler(lv_event_t * e) {
 
 static void up_handler(lv_event_t * e) {
 	lv_event_code_t code = lv_event_get_code(e);
-	char *c;
-	int temp;
 	if(code == LV_EVENT_CLICKED) {
+		char *c;
+		int temp;
 		c = lv_label_get_text(labelSetValue);
 		temp = atoi(c);
 		lv_label_set_text_fmt(labelSetValue, "%02d", temp + 1);

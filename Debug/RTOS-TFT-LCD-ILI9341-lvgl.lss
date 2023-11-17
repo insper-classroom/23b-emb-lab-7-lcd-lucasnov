@@ -19,23 +19,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   7 .comment      00000059  00000000  00000000  00040a16  2**0
                   CONTENTS, READONLY
-  8 .debug_info   000b8f91  00000000  00000000  00040a6f  2**0
+  8 .debug_info   000b8f74  00000000  00000000  00040a6f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev 00011978  00000000  00000000  000f9a00  2**0
+  9 .debug_abbrev 00011978  00000000  00000000  000f99e3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0004bd51  00000000  00000000  0010b378  2**0
+ 10 .debug_loc    0004bd51  00000000  00000000  0010b35b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00003008  00000000  00000000  001570c9  2**0
+ 11 .debug_aranges 00003008  00000000  00000000  001570ac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000051c0  00000000  00000000  0015a0d1  2**0
+ 12 .debug_ranges 000051c0  00000000  00000000  0015a0b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macro  000323d4  00000000  00000000  0015f291  2**0
+ 13 .debug_macro  000323d4  00000000  00000000  0015f274  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0004abd0  00000000  00000000  00191665  2**0
+ 14 .debug_line   0004abd0  00000000  00000000  00191648  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    000b1ab5  00000000  00000000  001dc235  2**0
+ 15 .debug_str    000b1ab5  00000000  00000000  001dc218  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_frame  000096e8  00000000  00000000  0028dcec  2**2
+ 16 .debug_frame  000096e8  00000000  00000000  0028dcd0  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -54315,7 +54315,7 @@ void configure_lvgl(void) {
   41884e:	23f0      	movs	r3, #240	; 0xf0
   418850:	8063      	strh	r3, [r4, #2]
 
-	lv_disp_t * disp;
+	//lv_disp_t * disp;
 	
 	/* Init input on LVGL */
 	lv_indev_drv_init(&indev_drv);
