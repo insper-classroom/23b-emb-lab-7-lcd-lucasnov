@@ -19,23 +19,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   7 .comment      00000059  00000000  00000000  00040a16  2**0
                   CONTENTS, READONLY
-  8 .debug_info   000b8f9d  00000000  00000000  00040a6f  2**0
+  8 .debug_info   000b8f91  00000000  00000000  00040a6f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev 00011978  00000000  00000000  000f9a0c  2**0
+  9 .debug_abbrev 00011978  00000000  00000000  000f9a00  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0004bd51  00000000  00000000  0010b384  2**0
+ 10 .debug_loc    0004bd51  00000000  00000000  0010b378  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00003008  00000000  00000000  001570d5  2**0
+ 11 .debug_aranges 00003008  00000000  00000000  001570c9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000051c0  00000000  00000000  0015a0dd  2**0
+ 12 .debug_ranges 000051c0  00000000  00000000  0015a0d1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macro  000323d4  00000000  00000000  0015f29d  2**0
+ 13 .debug_macro  000323d4  00000000  00000000  0015f291  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0004abd0  00000000  00000000  00191671  2**0
+ 14 .debug_line   0004abd0  00000000  00000000  00191665  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    000b1ab5  00000000  00000000  001dc241  2**0
+ 15 .debug_str    000b1ab5  00000000  00000000  001dc235  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_frame  000096e8  00000000  00000000  0028dcf8  2**2
+ 16 .debug_frame  000096e8  00000000  00000000  0028dcec  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -53501,7 +53501,7 @@ void my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data) {
   4182d8:	b510      	push	{r4, lr}
   4182da:	b082      	sub	sp, #8
   4182dc:	460c      	mov	r4, r1
-	int px, py, pressed;
+	int px, py;
 	
 	if (readPoint(&px, &py))
   4182de:	4669      	mov	r1, sp

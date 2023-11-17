@@ -293,7 +293,7 @@ void my_flush_cb(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * 
 }
 
 void my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data) {
-	int px, py, pressed;
+	int px, py;
 	
 	if (readPoint(&px, &py))
 		data->state = LV_INDEV_STATE_PRESSED;
@@ -314,7 +314,7 @@ void configure_lvgl(void) {
 	disp_drv.hor_res = LV_HOR_RES_MAX;      /*Set the horizontal resolution in pixels*/
 	disp_drv.ver_res = LV_VER_RES_MAX;      /*Set the vertical resolution in pixels*/
 
-	lv_disp_t * disp;
+	//lv_disp_t * disp;
 	
 	/* Init input on LVGL */
 	lv_indev_drv_init(&indev_drv);
