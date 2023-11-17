@@ -144,7 +144,8 @@ void lv_termostato(void) {
 	
 	static lv_style_t style;
 	lv_style_init(&style);
-	lv_style_set_bg_color(&style, lv_color_black());
+	lv_style_set_bg_color(&style, lv_palette_main(LV_PALETTE_PURPLE));
+	lv_style_set_border_width(&style, 5);
 	
 	static  lv_obj_t * labelBtn1;
 
@@ -314,12 +315,14 @@ void configure_lvgl(void) {
 	disp_drv.hor_res = LV_HOR_RES_MAX;      /*Set the horizontal resolution in pixels*/
 	disp_drv.ver_res = LV_VER_RES_MAX;      /*Set the vertical resolution in pixels*/
 
-	//lv_disp_t * disp;
+	lv_disp_t * disp;
+	disp = lv_disp_drv_register(&disp_drv);
 	
 	/* Init input on LVGL */
 	lv_indev_drv_init(&indev_drv);
 	indev_drv.type = LV_INDEV_TYPE_POINTER;
 	indev_drv.read_cb = my_input_read;
+   lv_indev_t * my_indev = lv_indev_drv_register(&indev_drv);
 }
 
 /************************************************************************/
